@@ -105,4 +105,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Built with ❤️ by Paul Archer**
 
-*Last updated: December 2024* 
+*Last updated: December 2024*
