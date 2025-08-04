@@ -1,3 +1,95 @@
+/* --- Open, Edge-to-Edge Mobile Styles --- */
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+    background: #fff;
+  }
+  .container {
+    padding: 0;
+    width: 100vw;
+    min-width: 0;
+    background: none;
+  }
+  .card {
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+    width: 100vw;
+    margin: 0;
+  }
+  .header, .section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .header h1 {
+    font-size: 1.5em;
+    margin-bottom: 0.2em;
+  }
+  .header .title {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+  }
+  .profile-img img {
+    width: 70px !important;
+    height: 70px !important;
+    margin-top: 10px;
+  }
+  .about-text {
+    font-size: 0.97em !important;
+    margin-bottom: 0.7em;
+  }
+  .section h2 {
+    font-size: 1.1em;
+    margin: 0.7em 0 0.3em 0;
+  }
+  .skills-grid, .projects-grid {
+    gap: 8px;
+  }
+  .project {
+    padding: 8px 0;
+    margin-bottom: 10px;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .project-image img {
+    width: 100vw !important;
+    max-width: 100%;
+    height: auto !important;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    margin: 0 auto;
+    display: block;
+  }
+  .project h3 {
+    font-size: 1em;
+    margin: 0.3em 0 0.2em 0;
+  }
+  .project p {
+    font-size: 0.95em;
+    margin-bottom: 0.4em;
+  }
+  .project-link {
+    font-size: 0.95em;
+    padding: 5px 10px;
+  }
+  .contact-info a {
+    font-size: 0.97em;
+    padding: 4px 0;
+  }
+  .resume-button {
+    margin-bottom: 0.7em;
+  }
+  .contact-form input, .contact-form textarea {
+    font-size: 0.97em;
+    padding: 7px;
+  }
+  .submit-btn {
+    font-size: 1em;
+    padding: 7px 14px;
+  }
+}
 /* --- Mobile Compact & Lighter Styles --- */
 @media (max-width: 600px) {
   body {
