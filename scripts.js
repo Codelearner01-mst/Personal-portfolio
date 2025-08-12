@@ -61,36 +61,34 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
-    });
-    
+    }) ;
+
     // Add particle effect to background
     createParticles();
-    
+
+    emailjs.init("y03GFEWPo7q9tG76z");
+
     // Handle contact form submission
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const subject = formData.get('subject');
-            const message = formData.get('message');
-            
-            // Create email body
-            const emailBody = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
-            
-            // Open email client with pre-filled data
-            const mailtoLink = `mailto:kwabenap603@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-            window.open(mailtoLink);
-            
-            // Show success message
-            alert('Thank you! Your message has been sent.');
-            this.reset();
-        });
-    }
+       
+         const serviceID="service_6z4w79v";
+         const templateID="template_kbdvoqj";
+         emailjs.sendForm(serviceID, templateID, this)
+         .then(() => {
+             alert('Message sent successfully!');
+         })
+         .catch((error) => {
+             console.error('Error sending email:', error);
+             alert('Failed to send message. Please try again later.');
+         });
+         });
+
+         }
+
+
     
     // Handle resume download
     const downloadResume = document.getElementById('downloadResume');
@@ -100,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Resume download feature coming soon! For now, please contact me directly.');
         });
     }
-});
 
 // Create floating particles
 function createParticles() {
@@ -167,4 +164,4 @@ document.head.appendChild(style);
                     }, 150);
                 });
             });
-        });
+        })});
