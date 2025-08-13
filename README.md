@@ -84,7 +84,6 @@ portfolio/
 - [ ] Implement dark mode toggle
 - [ ] Add blog section
 - [ ] Include testimonials
-- [ ] Add contact form
 - [ ] Implement analytics
 
 ## 🤝 Contributing

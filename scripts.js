@@ -1,6 +1,6 @@
-// Add smooth scroll behavior and interactive elements
-
-// Typing animation for the title
+// ==========================
+// Typing Animation
+// ==========================
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.innerHTML = '';
@@ -11,31 +11,31 @@ function typeWriter(element, text, speed = 100) {
     }, speed);
 }
 
-// Initialize typing animation when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    // Hide loading screen after a short delay
+// ==========================
+// Loading Screen
+// ==========================
+function hideLoadingScreen() {
+    const loadingScreen = document.getElementById('loadingScreen');
+    if (!loadingScreen) return;
+
+    loadingScreen.classList.add('hidden');
     setTimeout(() => {
-        const loadingScreen = document.getElementById('loadingScreen');
-        if (loadingScreen) {
-            loadingScreen.classList.add('hidden');
-            setTimeout(() => {
-                loadingScreen.style.display = 'none';
-            }, 500);
-        }
-    }, 1500);
-    
-    const title = document.querySelector('h1');
-    const originalText = title.textContent;
-    typeWriter(title, originalText, 150);
-    
-    // Add scroll animations
+        loadingScreen.style.display = 'none';
+    }, 500);
+}
+
+// ==========================
+// Scroll Animations for Sections
+// ==========================
+function initSectionScrollAnimations() {
     const sections = document.querySelectorAll('.section');
-    
+    if (!sections.length) return;
+
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -44,12 +44,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, observerOptions);
-    
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-    
-    // Add smooth scrolling for anchor links
+
+    sections.forEach(section => observer.observe(section));
+}
+
+// ==========================
+// Smooth Anchor Scrolling
+// ==========================
+function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -61,50 +63,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
-    }) ;
+    });
+}
 
-    // Add particle effect to background
-    createParticles();
-
-    emailjs.init("y03GFEWPo7q9tG76z");
-
-    // Handle contact form submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-       
-         const serviceID="service_6z4w79v";
-         const templateID="template_kbdvoqj";
-         emailjs.sendForm(serviceID, templateID, this)
-         .then(() => {
-             alert('Message sent successfully!');
-         })
-         .catch((error) => {
-             console.error('Error sending email:', error);
-             alert('Failed to send message. Please try again later.');
-         });
-         });
-
-         }
-
-
-    
-    // Handle resume download
-    const downloadResume = document.getElementById('downloadResume');
-    if (downloadResume) {
-        downloadResume.addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('Resume download feature coming soon! For now, please contact me directly.');
-        });
-    }
-
-// Create floating particles
-function createParticles() {
+// ==========================
+// Particle Background
+// ==========================
+function createParticles(count = 20) {
     const body = document.body;
-    const particleCount = 20;
-    
-    for (let i = 0; i < particleCount; i++) {
+
+    for (let i = 0; i < count; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
         particle.style.cssText = `
@@ -122,46 +90,64 @@ function createParticles() {
     }
 }
 
-// Add CSS for particles
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes float {
-        0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
-        50% { transform: translateY(-20px) rotate(180deg); opacity: 0.8; }
-    }
-`;
-document.head.appendChild(style);
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add subtle animation on scroll
-            const card = document.querySelector('.card');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            });
+// ==========================
+// Initialize EmailJS Contact Form
+// ==========================
+function initContactForm() {
+    const contactForm = document.getElementById('contactForm');
+    if (!contactForm) return;
 
-            // Initial animation
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            
-            setTimeout(() => {
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
-            }, 100);
+    const serviceID = "service_6z4w79v";
+    const templateID = "template_kbdvoqj";
 
-            // Add click effect to skill items
-            const skillItems = document.querySelectorAll('.skill-item');
-            skillItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    this.style.transform = 'scale(0.95)';
-                    setTimeout(() => {
-                        this.style.transform = 'scale(1.05)';
-                    }, 150);
-                });
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => alert('Message sent successfully!'))
+            .catch((error) => {
+                console.error('Error sending email:', error);
+                alert('Failed to send message. Please try again later.');
             });
-        })});
+    });
+}
+
+// ==========================
+// Resume Download Placeholder
+// ==========================
+function initResumeDownload() {
+    const downloadResume = document.getElementById('downloadResume');
+    if (!downloadResume) return;
+
+    downloadResume.addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('Resume download feature coming soon! Please contact me directly.');
+    });
+}
+
+// ==========================
+// Initialize all features after DOM loads
+// ==========================
+document.addEventListener('DOMContentLoaded', function() {
+    // Typing animation
+    const title = document.querySelector('h1');
+    if (title) typeWriter(title, title.textContent, 150);
+
+    // Hide loading screen
+    setTimeout(hideLoadingScreen, 1500);
+
+    // Scroll animations
+    initSectionScrollAnimations();
+
+    // Smooth scroll
+    initSmoothScroll();
+
+    // Particle background
+    createParticles();
+
+    // Initialize EmailJS
+    emailjs.init("y03GFEWPo7q9tG76z");
+    initContactForm();
+
+    // Resume download
+    initResumeDownload();
+});
