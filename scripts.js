@@ -112,19 +112,6 @@ function initContactForm() {
 }
 
 // ==========================
-// Resume Download Placeholder
-// ==========================
-function initResumeDownload() {
-    const downloadResume = document.getElementById('downloadResume');
-    if (!downloadResume) return;
-
-    downloadResume.addEventListener('click', function(e) {
-        e.preventDefault();
-        alert('Resume download feature coming soon! Please contact me directly.');
-    });
-}
-
-// ==========================
 // Initialize all features after DOM loads
 // ==========================
 document.addEventListener('DOMContentLoaded', function() {

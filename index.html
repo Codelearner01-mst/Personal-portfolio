@@ -15,48 +15,59 @@
             <p>Loading Portfolio...</p>
         </div>
     </div>
-    
-    <div class="container">
-        <div class="card">
-            <div class="header">
-                <div class="profile-img">
-                    <img src="images/my-profile.png" alt="Profile Picture" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #fff; background: #f8f8f8; box-shadow: 0 4px 16px rgba(0,0,0,0.10); display: block; margin: 0 auto;" />
-                </div>
-                <h1>Paul Archer</h1>
-                <p class="title">Web Developer & Designer</p>
-                
-                <div class="resume-button">
-                    <a href="#" class="download-resume" id="downloadResume">
-                        <i class="fas fa-download"></i> Download Resume
-                    </a>
-                </div>
-                
-                <div class="contact-info">
-                    <a href="mailto:kwabenap603@gmail.com" class="contact-item">
-                        <i class="fas fa-envelope"></i> kwabenap603@gmail.com
-                    </a>
-                    <a href="tel:+233535750228" class="contact-item">
-                        <i class="fas fa-phone"></i> (233) 535750228
-                    </a>
-                    <a href="https://github.com/Codelearner01-mst" class="contact-item" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="https://linkedin.com/in/yourprofile" class="contact-item" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                </div>
-            </div>
+        <header>
+           
+          <div class="header-bar">
+           
+              <p class="logo">Vision</p>
+           
+             <div class="contact-info">
+                <a href="mailto:kwabenap603@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i> 
+                </a>
+                <a href="tel:+233535750228" class="contact-item">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="https://github.com/Codelearner01-mst" class="contact-item" target="_blank">
+                    <i class="fab fa-github"></i> 
+                </a>
+             </div>
 
-            <div class="section">
-                <h2>About Me</h2>
-                <p class="about-text">
-                    I'm a passionate developer who loves creating beautiful and functional web experiences. 
-                    With a keen eye for design and strong technical skills, I bring ideas to life through clean, 
-                    efficient code and thoughtful user interfaces.
-                </p>
-                <p class="about-text" style="margin-top: 10px; color: #666; font-size: 0.98em;">
-                    <strong>Learning Journey:</strong> I am actively growing my skills and always eager to take on new challenges. While I am still early in my freelancing career, I am committed to delivering quality work and learning from every project. If you need a dedicated developer who is motivated to learn and help your business, let's connect!
-                </p>
+            
+             
+          
+             <!--  <nav class="nav-bar">
+                    <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>-->
+          </div>
+              
+        </header>
+            <div class="home-section">
+                   <div class="profile-img">
+                      <img src="images/my-profile.png" alt="Profile Picture" class="profile-pic"/>
+                  </div>        
+          
+              <div class="greeting-container">
+                 <p class="greeting"><span>Hello</span>,<br> I'm Paul Archer</p>
+                 <p class="title"><b> Web Developer </b></p>
+               </div>
+            </div>
+              
+            <div class="about-section">
+                    <h2>About Me</h2>
+                    <p>I'm a passionate developer who loves creating beautiful and functional web experiences.<br> 
+                    With a keen eye for design and strong technical skills, I bring ideas to life<br> through clean, 
+                    efficient code and thoughtful user interfaces.</p>
+                    <h2>Learning Journey</h2>
+                        <p>I am actively growing my skills and always eager to take on new challenges.<br>
+                        While I am still early in my freelancing career, I am committed to delivering quality work and learning from every project. If you need a dedicated developer who is motivated to learn and help your business, let's connect!
+                        </p>
             </div>
 
             <div class="section">
@@ -65,13 +76,12 @@
                     <div class="skill-item">HTML/CSS</div>
                     <div class="skill-item">JavaScript</div>
                     <div class="skill-item">Python</div>
-                    <div class="skill-item">UI/UX Design</div>
+                    <div class="skill-item">Tailwind CSS</div>
                 </div>
             </div>
 
             <div class="section">
                 <h2>Featured Projects</h2>
-                <div class="projects-grid">
 
                 <div class="project">
                     <div class="project-image">
@@ -81,7 +91,7 @@
                             <p>Calculator Screenshot</p>
                         </div>
                     </div>
-                    <h3>Basic Calculator</h3>
+                    <h4>Basic Calculator</h4>
                     <p>A simple calculator web app that performs basic arithmetic operations. Built with HTML, CSS, and JavaScript.</p>
                     <a href="https://github.com/Codelearner01-mst/Basic-Calculator" class="project-link" target="_blank">View on GitHub →</a>
                 </div>
@@ -94,7 +104,7 @@
                             <p>To-Do List Screenshot</p>
                         </div>
                     </div>
-                    <h3>To-Do List</h3>
+                    <h4>To-Do List</h4>
                     <p>An interactive to-do list application to help users manage daily tasks. Features add, delete, and mark-as-done functionality.</p>
                     <a href="https://github.com/Codelearner01-mst/To-do-list" class="project-link">View on Github →</a>
                 </div>
@@ -107,7 +117,7 @@
                             <p>Game Screenshot</p>
                         </div>
                     </div>
-                    <h3>Number Guessing Game</h3>
+                    <h4>Number Guessing Game</h4>
                     <p>A fun game where users try to guess a randomly generated number. Includes feedback and score tracking.</p>
                     <a href="https://github.com/Codelearner01-mst/Number-Guessing-Game" class="project-link">View on Github →</a>
                 </div>
@@ -121,13 +131,26 @@
                             <p>Portfolio Screenshot</p>
                         </div>
                     </div>
-                    <h3>Personal Portfolio Website</h3>
+                    <h4>Personal Portfolio Website</h4>
                     <p>This portfolio website showcasing my skills, projects, and experience as a web developer and designer.</p>
                     <a href="https://codelearner01-mst.github.io/Personal-portfolio/" class="project-link" target="_blank">View Live →</a>
                     <a href="https://github.com/Codelearner01-mst/Personal-portfolio" class="project-link" target="_blank">View on GitHub →</a>
                 </div>
+
+                <div class="project">
+                    <div class="project-image">
+                        <img src="images/quote-screenshot.png" alt="Random quote generator" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        
+                        <div class="project-placeholder" style="display: none;">
+                            <i class="fas fa-user"></i>
+                            <p>Quote generator Screenshot</p>
+                        </div>
+                    </div>
+                    <h4>Random quote generator</h4>
+                    <p>A nice UI interface that generate random quote with author name. User can also bookmark favourite quote.</p>
+                    <a href="#" class="project-link" target="_blank">Coming soon</a>
                 </div>
-            </div>
+            </div>   
 
             <div class="section">
                 <h2>Get In Touch</h2>
@@ -149,8 +172,7 @@
                     </button>
                 </form>
             </div>
-        </div>
-    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
