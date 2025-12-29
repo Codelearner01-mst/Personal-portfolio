@@ -1,15 +1,3 @@
-// ==========================
-// Typing Animation
-// ==========================
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    const timer = setInterval(() => {
-        element.innerHTML += text.charAt(i);
-        i++;
-        if (i >= text.length) clearInterval(timer);
-    }, speed);
-}
 
 // ==========================
 // Loading Screen
@@ -112,25 +100,9 @@ function initContactForm() {
 }
 
 // ==========================
-// Resume Download Placeholder
-// ==========================
-function initResumeDownload() {
-    const downloadResume = document.getElementById('downloadResume');
-    if (!downloadResume) return;
-
-    downloadResume.addEventListener('click', function(e) {
-        e.preventDefault();
-        alert('Resume download feature coming soon! Please contact me directly.');
-    });
-}
-
-// ==========================
 // Initialize all features after DOM loads
 // ==========================
 document.addEventListener('DOMContentLoaded', function() {
-    // Typing animation
-    const title = document.querySelector('h1');
-    if (title) typeWriter(title, title.textContent, 150);
 
     // Hide loading screen
     setTimeout(hideLoadingScreen, 1500);
@@ -148,6 +120,4 @@ document.addEventListener('DOMContentLoaded', function() {
     emailjs.init("y03GFEWPo7q9tG76z");
     initContactForm();
 
-    // Resume download
-    initResumeDownload();
 });
