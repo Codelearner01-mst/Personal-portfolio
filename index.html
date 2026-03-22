@@ -1,170 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paul - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="loader">
-            <div class="spinner"></div>
-            <p>Loading Portfolio...</p>
-        </div>
-    </div>
-        <header>
-           
-          <div class="header-bar">
-           
-              <p class="logo">Vision</p>
-           
-             <div class="contact-info">
-                <a href="mailto:kwabenap603@gmail.com" class="contact-item">
-                    <i class="fas fa-envelope"></i> 
-                </a>
-                <a href="tel:+233535750228" class="contact-item">
-                    <i class="fas fa-phone"></i>
-                </a>
-                <a href="https://github.com/Codelearner01-mst" class="contact-item" target="_blank">
-                    <i class="fab fa-github"></i> 
-                </a>
-             </div>
+  </head>
+  <body>
+    <main>
+      <h1>Paul Archer - Portfolio</h1>
 
-          </div>
-              
-        </header>
-            <div class="home-section">
-                   <div class="profile-img">
-                      <img src="images/my-profile.png" alt="Profile Picture" class="profile-pic"/>
-                  </div>        
-          
-              <div class="greeting-container">
-                 <p class="greeting"><span>Hello</span>,<br> I'm Paul Archer</p>
-                 <p class="title"><b> Web Developer </b></p>
-               </div>
-            </div>
-              
-            <div class="about-section">
-                    <h2>About Me</h2>
-                    <p>I'm a passionate developer who loves creating beautiful and functional web experiences.<br> 
-                    With a keen eye for design and strong technical skills, I bring ideas to life<br> through clean, 
-                    efficient code and thoughtful user interfaces.</p>
-                    <h2>Learning Journey</h2>
-                        <p>I am actively growing my skills and always eager to take on new challenges.<br>
-                        While I am still early in my freelancing career, I am committed to delivering quality work and learning from every project. If you need a dedicated developer who is motivated to learn and help your business, let's connect!
-                        </p>
-            </div>
+      <section>
+        <h2>About Me</h2>
+        <p>
+          I'm a developer building web experiences using HTML, CSS, and
+          JavaScript.
+        </p>
+      </section>
 
-            <div class="section">
-                <h2>Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">HTML/CSS</div>
-                    <div class="skill-item">JavaScript</div>
-                    <div class="skill-item">Python</div>
-                    <div class="skill-item">Tailwind CSS</div>
-                </div>
-            </div>
+      <section>
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML/CSS</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>Tailwind CSS</li>
+        </ul>
+      </section>
 
-            <div class="section">
-                <h2>Featured Projects</h2>
+      <section>
+        <h2>Projects</h2>
+        <ul>
+          <li>Basic Calculator</li>
+          <li>To-Do List</li>
+          <li>Number Guessing Game</li>
+          <li>Personal Portfolio Website</li>
+          <li>Random Quote Generator</li>
+        </ul>
+      </section>
 
-                <div class="project">
-                    <div class="project-image">
-                        <img src="images/calculator-screenshot.png" alt="Basic Calculator App" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="project-placeholder" style="display: none;">
-                            <i class="fas fa-calculator"></i>
-                            <p>Calculator Screenshot</p>
-                        </div>
-                    </div>
-                    <h4>Basic Calculator</h4>
-                    <p>A simple calculator web app that performs basic arithmetic operations. Built with HTML, CSS, and JavaScript.</p>
-                    <a href="https://github.com/Codelearner01-mst/Basic-Calculator" class="project-link" target="_blank">View on GitHub →</a>
-                </div>
-
-                <div class="project">
-                    <div class="project-image">
-                        <img src="images/Tdl-screenshot.png" alt="To-Do List" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="project-placeholder" style="display: none;">
-                            <i class="fas fa-list-check"></i>
-                            <p>To-Do List Screenshot</p>
-                        </div>
-                    </div>
-                    <h4>To-Do List</h4>
-                    <p>An interactive to-do list application to help users manage daily tasks. Features add, delete, and mark-as-done functionality.</p>
-                    <a href="https://github.com/Codelearner01-mst/To-do-list" class="project-link">View on Github →</a>
-                </div>
-
-                <div class="project">
-                    <div class="project-image">
-                        <img src="images/game-screenshot.png" alt="Number Guessing Game" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="project-placeholder" style="display: none;">
-                            <i class="fas fa-gamepad"></i>
-                            <p>Game Screenshot</p>
-                        </div>
-                    </div>
-                    <h4>Number Guessing Game</h4>
-                    <p>A fun game where users try to guess a randomly generated number. Includes feedback and score tracking.</p>
-                    <a href="https://github.com/Codelearner01-mst/Number-Guessing-Game" class="project-link">View on Github →</a>
-                </div>
-
-                <div class="project">
-                    <div class="project-image">
-                        <img src="images/portfolio-screenshot.png" alt="Personal Portfolio Website" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                      
-                        <div class="project-placeholder" style="display: none;">
-                            <i class="fas fa-user"></i>
-                            <p>Portfolio Screenshot</p>
-                        </div>
-                    </div>
-                    <h4>Personal Portfolio Website</h4>
-                    <p>This portfolio website showcasing my skills, projects, and experience as a web developer and designer.</p>
-                    <a href="https://codelearner01-mst.github.io/Personal-portfolio/" class="project-link" target="_blank">View Live →</a>
-                    <a href="https://github.com/Codelearner01-mst/Personal-portfolio" class="project-link" target="_blank">View on GitHub →</a>
-                </div>
-
-                <div class="project">
-                    <div class="project-image">
-                        <img src="images/quote-screenshot.png" alt="Random quote generator" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        
-                        <div class="project-placeholder" style="display: none;">
-                            <i class="fas fa-user"></i>
-                            <p>Quote generator Screenshot</p>
-                        </div>
-                    </div>
-                    <h4>Random quote generator</h4>
-                    <p>A nice UI interface that generate random quote with author name. User can also bookmark favourite quote.</p>
-                    <a href="#" class="project-link" target="_blank">Coming soon</a>
-                </div>
-            </div>   
-
-            <div class="section">
-                <h2>Get In Touch</h2>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                </form>
-            </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-    <script src="scripts.js"> 
-    </script>
-</body>
+      <section>
+        <h2>Contact</h2>
+        <p>Email: kwabenap603@gmail.com</p>
+        <p>Phone: +233535750228</p>
+        <p>
+          GitHub:
+          <a href="https://github.com/Codelearner01-mst" target="_blank"
+            >Codelearner01-mst</a
+          >
+        </p>
+      </section>
+    </main>
+  </body>
 </html>
