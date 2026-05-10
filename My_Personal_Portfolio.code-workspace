@@ -1,10 +1,11 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": ".",
+			"name": "Personal-portfolio"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Number_Guessing_Game"
+		"window.title": "Personal portfolio${separator}${dirty}${activeEditorShort}"
 	}
 }
