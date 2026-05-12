@@ -6,7 +6,10 @@ export const portfolioData = {
   company: "Plural.com",
   location: "Ghana",
   bio: "With a strong background in software engineering, technical leadership, and product innovation, I excel at turning complex challenges into scalable, high-impact solutions—always staying ahead by leveraging the latest technologies and best practices.",
-  about: "I am a passionate technologist and leader focused on building high-performing engineering teams and creating innovative, scalable products. My journey spans over a decade of hands-on experience in software development, architecture, and engineering management. I thrive in dynamic environments where I can leverage my expertise to drive technological excellence, mentor emerging talent, and shape product strategy from conception to deployment. When I'm not coding or architecting systems, you can find me exploring the latest advancements in AI and cloud computing.",
+  about: `I'm a Full-Stack Developer with 2 years of experience building websites and web apps for businesses. I enjoy turning ideas into working products — whether that's a business website, a custom tool, or a full web application.
+I work on both the frontend and backend, and I care about building things that are clean, fast, and easy to use. Over the past couple of years, I've built and shipped a few projects and helped solve real problems through code.
+
+Right now, my focus is simple: keep improving and build things that actually help businesses work better.`,
   tags: ["CTO", "Software Engineer", "AI"],
   email: "ahmed@tokyo.dev",
   avatar: Avatar,

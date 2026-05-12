@@ -15,9 +15,15 @@ export default function About() {
           </h2>
         </div>
         <div className="bg-paper border border-ink p-8 shadow-[8px_8px_0_#000000]">
-          <p className="text-ink text-lg leading-relaxed font-body">
-            {about}
-          </p>
+          <div className="space-y-4 text-ink text-lg leading-relaxed font-body">
+            {about
+              .split(/\n\s*\n/)
+              .map((block) => block.trim())
+              .filter(Boolean)
+              .map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+          </div>
         </div>
       </div>
     </section>
