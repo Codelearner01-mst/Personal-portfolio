@@ -1,56 +1,78 @@
 import { useState } from "react";
 
-import calculatorImg from "../../../images/calculator-screenshot.png";
-import gameImg from "../../../images/game-screenshot.png";
-import portfolioImg from "../../../images/portfolio-screenshot.png";
-import quoteImg from "../../../images/quote-screenshot.png";
-import tdlImg from "../../../images/Tdl-screenshot.png";
+import jewelry_commerceImg from "../../../images/Screenshot-jewelry_commerce 2026-05-15.png";
+import mamakofiRestaurantImg from "../../../images/Screenshot-mamakofi-restaurant 2026-05-15.png";
+import portfolioImg from "../../../images/Screenshot 2026-05-15 121835.png";
+import movieWebsiteImg from "../../../images/Screenshot-movie-website 2026-05-15.png";
+import naomiDresssImg from "../../../images/Screenshot-Naomi_dress-2026-04-03.png";
+import stableJerseysImg from "../../../images/Screenshot-stable-jeyseys 2026-04-09.png";
 
 const projects = [
   {
     cat: "Web",
-    title: "Basic Calculator",
-    desc: "A clean browser calculator for everyday arithmetic with a focused layout and clear controls.",
+    title: "Jewelry ecommerce demo",
+    desc: "A responsive Jewelry ecommerce demo with cart, ordering flow and fake payments logic.",
     tags: ["HTML", "CSS", "JavaScript"],
     time: "2 months ago",
     views: "2,340",
-    image: calculatorImg,
+    image: jewelry_commerceImg,
+    source: "https://github.com/Codelearner01-mst/E-commerce-website",
+    live: "https://e-commerce-website-git-main-codelearner01-msts-projects.vercel.app/index.html"
   },
   {
     cat: "Web",
-    title: "Number Guessing Game",
-    desc: "An interactive guessing game with feedback prompts, built to practice DOM logic and user flow.",
-    tags: ["JavaScript", "DOM", "Games"],
+    title: "Mamakofi kitchen",
+    desc: "A full-stack project micmiking restaurant vibes with clean ui, ordering flow, payment integration using paystack.",
+    tags: ["React", "Tailwind css", "python", "Flask", "Postgre", "Sqlalchemy"],
     time: "3 months ago",
     views: "1,890",
-    image: gameImg,
+    image: mamakofiRestaurantImg,
+    source: "https://github.com/Codelearner01-mst/Food_delivery_website",
+    live: "https://food-delivery-website-topaz-beta.vercel.app/"
   },
   {
     cat: "Frontend",
     title: "Personal Portfolio Website",
     desc: "A responsive portfolio showcasing projects and contact links with a polished presentation layer.",
-    tags: ["Responsive", "UI", "Vite"],
+    tags: ["Responsive", "React", "UI", "Vite"],
     time: "1 month ago",
     views: "3,120",
     image: portfolioImg,
+    source: "https://github.com/Codelearner01-mst/Personal-portfolio",
+    live: "https://personal-portfolio-ecru-kappa-57.vercel.app/#"
   },
   {
     cat: "Frontend",
-    title: "Random Quote Generator",
-    desc: "Fetches and displays motivational quotes with a simple refresh interaction and readable typography.",
-    tags: ["Fetch API", "JavaScript"],
+    title: "Cinematix movies",
+    desc: "Fetches and displays all kind of movies including upcoming, latests,etc from TMB movies api.",
+    tags: ["Fetch API", "React", "TMB"],
     time: "4 months ago",
     views: "1,450",
-    image: quoteImg,
+    image: movieWebsiteImg,
+    source: "https://github.com/Codelearner01-mst/movie_webite",
+    live: "https://movie-webite.vercel.app/"
   },
   {
     cat: "Web",
-    title: "To-Do List",
-    desc: "A task list app for adding, marking, and organizing items with persistent-feeling UX patterns.",
+    title: "Naomi Dress",
+    desc: "A responsive website that displays products with whatsapp contact integration for easy ordering of product",
     tags: ["React", "State", "UI"],
     time: "2 months ago",
     views: "1,980",
-    image: tdlImg,
+    image: naomiDresssImg,
+    source: "https://github.com/Codelearner01-mst/dress_landing_page",
+    live: "https://codelearner01-mst.github.io/dress_landing_page/"
+  },
+  {
+    cat: "Web",
+    title: "Stable Jerseys",
+    desc: "A platform for browsing a wide selection of jerseys with integrated WhatsApp contact for quick and easy ordering.",
+    tags: ["Javascript", "WhatsApp", "CSS"],
+    time: "1 month ago",
+    views: "1,200",
+    image: stableJerseysImg,
+    source: "https://github.com/Codelearner01-mst/Jersey-customize-websites",
+    live: "https://jersey-customize-websites.vercel.app/"
   },
 ];
 
@@ -86,10 +108,9 @@ export default function Projects() {
               key={f}
               onClick={() => setActive(f)}
               className={`font-heading text-[13px] font-bold tracking-wider uppercase px-4 py-2 rounded border-[1.5px] transition-all duration-200
-                ${
-                  active === f
-                    ? "bg-ink text-paper border-ink"
-                    : "bg-transparent text-muted border-border hover:border-ink hover:text-ink"
+                ${active === f
+                  ? "bg-ink text-paper border-ink"
+                  : "bg-transparent text-muted border-border hover:border-ink hover:text-ink"
                 }`}
             >
               {f === "Web" && "🌐 "}
@@ -145,12 +166,12 @@ export default function Projects() {
 
                 {/* Actions */}
                 <div className="flex gap-2.5 items-center">
-                  <div className="w-9 h-9 rounded-full border border-border flex items-center justify-center text-[13px] font-bold text-muted hover:border-ink hover:text-ink transition-all duration-200 cursor-pointer">
+                  <a href={p.source} className="w-9 h-9 rounded-full border border-border flex items-center justify-center text-[13px] font-bold text-muted hover:border-ink hover:text-ink transition-all duration-200 cursor-pointer">
                     GH
-                  </div>
-                  <button className="flex-1 font-heading text-[13px] font-bold tracking-widest uppercase py-2.5 bg-ink text-paper border-2 border-ink hover:bg-accent hover:text-ink hover:border-accent transition-all duration-200">
+                  </a>
+                  <a href={p.live} className="flex-1 font-heading text-[13px] font-bold tracking-widest uppercase py-2.5 bg-ink text-paper border-2 border-ink hover:bg-accent hover:text-ink hover:border-accent transition-all duration-200">
                     View Project ↗
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
