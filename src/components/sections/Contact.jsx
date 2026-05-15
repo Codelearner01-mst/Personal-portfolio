@@ -45,7 +45,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-[12px] uppercase tracking-widest text-muted/60 font-heading font-bold mb-0.5">Email</p>
-                  <p className="font-medium">ahmed@tokyo.dev</p>
+                  <p className="font-medium">kwabenap603@gmail.com</p>
                 </div>
               </div>
 
@@ -55,7 +55,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-[12px] uppercase tracking-widest text-muted/60 font-heading font-bold mb-0.5">Location</p>
-                  <p className="font-medium">Palo Alto, California</p>
+                  <p className="font-medium">Ghana, Accra</p>
                 </div>
               </div>
             </div>

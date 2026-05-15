@@ -23,7 +23,7 @@ export default function App() {
       </main>
       <footer className="border-t border-border py-6 text-center pb-24">
         <p className="font-body text-[14px] text-muted">
-          © {new Date().getFullYear()} Ahmed Tokyo. Built with React & Tailwind CSS.
+          © {new Date().getFullYear()} Paul Archer. Built with React & Tailwind CSS.
         </p>
       </footer>
       <FloatingSocials />

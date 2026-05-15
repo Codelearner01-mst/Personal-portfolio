@@ -28,7 +28,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <a href="#" className="font-display text-xl tracking-[5px] text-ink">
-            A-<span className="border-b-[3px] border-ink">TOKYO</span>
+            P-<span className="border-b-[3px] border-ink">ARCHER</span>
           </a>
 
           {/* Desktop links */}

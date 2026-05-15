@@ -2,7 +2,7 @@ import Avatar from "../assets/images/my-profile.png";
 
 export const portfolioData = {
   name: "Paul Archer",
-  role: "CTO",
+  role: "Full-stack",
   company: "Plural.com",
   location: "Ghana",
   bio: "With a strong background in software engineering, technical leadership, and product innovation, I excel at turning complex challenges into scalable, high-impact solutions—always staying ahead by leveraging the latest technologies and best practices.",
@@ -10,14 +10,14 @@ export const portfolioData = {
 I work on both the frontend and backend, and I care about building things that are clean, fast, and easy to use. Over the past couple of years, I've built and shipped a few projects and helped solve real problems through code.
 
 Right now, my focus is simple: keep improving and build things that actually help businesses work better.`,
-  tags: ["CTO", "Software Engineer", "AI"],
-  email: "ahmed@tokyo.dev",
+  tags: ["Software developer", , "Full-stack developer", "AI"],
+  email: "kwabenap603@gmail.com",
   avatar: Avatar,
   socials: {
-    github: "https://github.com",
+    github: "https://github.com/Codelearner01-mst/",
     twitter: "https://twitter.com",
     linkedin: "https://linkedin.com",
-    email: "mailto:ahmed@tokyo.dev",
+    email: "mailto:kwabenap603@gmail.com",
   },
   resume: "/resume.pdf",
 };
