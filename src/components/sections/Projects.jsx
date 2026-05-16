@@ -125,7 +125,7 @@ export default function Projects() {
           {shown.map((p) => (
             <div
               key={p.title}
-              className="bg-paper border border-border rounded-xl overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-250"
+              className="bg-paper border border-border rounded-xl overflow-hidden hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
             >
               {/* Thumbnail */}
               <div className="relative h-44 bg-ink/[0.06] border-b border-border overflow-hidden shrink-0">

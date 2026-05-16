@@ -1,31 +1,43 @@
+import { 
+  Atom, 
+  Palette, 
+  Terminal, 
+  Zap, 
+  Link, 
+  Database, 
+  Cloud, 
+  GitBranch, 
+  Code2 
+} from "lucide-react";
+
 const stack = [
   {
     category: "Frontend", tools: [
-      { name: "React", emoji: "⚛️" },
-      { name: "Tailwind", emoji: "🎨" },
+      { name: "React", icon: Atom },
+      { name: "Tailwind", icon: Palette },
     ]
   },
   {
     category: "Backend", tools: [
-      { name: "Python", emoji: "🐍" },
-      { name: "FastAPI", emoji: "⚡" },
-      { name: "REST APIs", emoji: "🔗" },
+      { name: "Python", icon: Terminal },
+      { name: "FastAPI", icon: Zap },
+      { name: "REST APIs", icon: Link },
     ]
   },
   {
     category: "Database", tools: [
-      { name: "PostgreSQL", emoji: "🐘" },
+      { name: "PostgreSQL", icon: Database },
     ]
   },
   {
     category: "DevOps & Cloud", tools: [
-      { name: "Vercel", emoji: "▲" },
+      { name: "Vercel", icon: Cloud },
     ]
   },
   {
     category: "AI & Tools", tools: [
-      { name: "Git", emoji: "🌿" },
-      { name: "VS Code", emoji: "💻" },
+      { name: "Git", icon: GitBranch },
+      { name: "VS Code", icon: Code2 },
     ]
   },
 ];
@@ -65,7 +77,7 @@ export default function TechStack() {
                     key={tool.name}
                     className="flex items-center gap-2.5 px-4 py-2.5 rounded-lg border border-paper/10 bg-paper/5 hover:bg-accent hover:border-accent hover:text-ink transition-all duration-200 cursor-default group"
                   >
-                    <span className="text-[18px] leading-none">{tool.emoji}</span>
+                    <tool.icon className="w-5 h-5 text-paper/60 group-hover:text-ink transition-colors duration-200" strokeWidth={1.5} />
                     <span className="font-heading text-[14px] font-bold tracking-wide text-paper/70 group-hover:text-ink transition-colors duration-200">
                       {tool.name}
                     </span>

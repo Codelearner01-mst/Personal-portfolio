@@ -15,8 +15,8 @@ Right now, my focus is simple: keep improving and build things that actually hel
   avatar: Avatar,
   socials: {
     github: "https://github.com/Codelearner01-mst/",
-    twitter: "https://twitter.com",
-    linkedin: "https://linkedin.com",
+    twitter: "https://x.com/KwabenaPau17743",
+    linkedin: "https://linkedin.com/in/paul-archer-8432603b7",
     email: "mailto:kwabenap603@gmail.com",
   },
   resume: "/resume.pdf",

@@ -1,42 +1,35 @@
 const experiences = [
   {
-    role: "Chief Technology Officer",
-    company: "Plural.com",
-    type: "Full-time",
-    period: "2022 — Present",
-    duration: "2 yrs 4 mos",
-    desc: "Leading all technical strategy, architecture, and engineering teams. Scaled infrastructure to support 10x user growth, introduced AI-driven product features, and built a cross-functional team of 30+ engineers.",
-    tags: ["Leadership", "System Design", "AI", "React", "AWS"],
+    role: "Backend & Full-Stack Development",
+    company: "Personal Mastery",
+    type: "Self-Led",
+    period: "April 2026 — Present",
+    duration: "Ongoing",
+    desc: "Transitioned into deep backend development, focusing on database architecture with PostgreSQL and server-side logic using Python and Flask. Building integrated, live solutions like the Mamakofi Kitchen project.",
+    sources: ["FreeCodeCamp", "YouTube", "Official Docs"],
+    tags: ["Python", "Flask", "SqlAlchemy", "PostgreSQL", "Backend Architecture", "RestAPI", "Basic Linux"],
     accent: "#000000",
   },
   {
-    role: "Senior Software Engineer",
-    company: "Stripe",
-    type: "Full-time",
-    period: "2020 — 2022",
-    duration: "2 yrs",
-    desc: "Built and maintained core payment infrastructure handling billions in transactions. Led a team of 6 engineers delivering new developer APIs and SDKs used by 100k+ developers globally.",
-    tags: ["Node.js", "TypeScript", "PostgreSQL", "Distributed Systems"],
+    role: "Frontend Developer (React)",
+    company: "The Javascript Journey",
+    type: "Learning",
+    period: "July 2025 — April 2026",
+    duration: "10 mos",
+    desc: "Mastered the React ecosystem and modern styling with Tailwind CSS. Focused on building responsive, high-performance UIs, state management, and component testing to ensure clean, bug-free code.",
+    sources: ["FreeCodeCamp"],
+    tags: ["JavaScript", "React", "Tailwind CSS", "Testing", "Performance"],
     accent: "#000000",
   },
   {
-    role: "Software Engineer",
-    company: "Meta",
-    type: "Full-time",
-    period: "2018 — 2020",
-    duration: "2 yrs",
-    desc: "Developed high-performance React components for Facebook's news feed reaching 2B+ users. Contributed to the open-source GraphQL specification and internal tooling.",
-    tags: ["React", "GraphQL", "Python", "Performance"],
-    accent: "#000000",
-  },
-  {
-    role: "Frontend Developer",
-    company: "Vercel",
-    type: "Contract",
-    period: "2017 — 2018",
-    duration: "1 yr",
-    desc: "Designed and built the initial version of the Vercel dashboard UI. Worked closely with the founding team to define the product's design language and component library.",
-    tags: ["Next.js", "React", "CSS", "Design Systems"],
+    role: "The Foundation",
+    company: "First Lines of Code",
+    type: "Beginner",
+    period: "Nov 2024 — June 2025",
+    duration: "8 mos",
+    desc: "Started the programming journey by mastering the core fundamentals. Learned Python for logic, basics SQL, and HTML/CSS to build the structural and visual foundations of the web.",
+    sources: ["Mimo", "SoloLearn"],
+    tags: ["Python", "HTML", "CSS", "Web Fundamentals", "SQL"],
     accent: "#000000",
   },
 ];
@@ -51,7 +44,7 @@ export default function Experience() {
             <span className="absolute top-0 left-1/2 -translate-x-1/2 font-display text-[82px] leading-none text-ink/[0.04] tracking-widest select-none whitespace-nowrap pointer-events-none">
               05
             </span>
-            <h2 className="font-heading text-4xl font-extrabold relative">Work Experience</h2>
+            <h2 className="font-heading text-4xl font-extrabold relative">My Journey</h2>
           </div>
           <p className="text-muted text-[17px] mt-3">The journey that shaped my craft</p>
         </div>
@@ -98,6 +91,18 @@ export default function Experience() {
                   </div>
 
                   <p className="text-[15.5px] leading-relaxed text-muted mb-4">{exp.desc}</p>
+
+                  {/* Sources */}
+                  <div className="mb-4">
+                    <span className="text-[12px] font-bold uppercase tracking-wider text-muted/60 block mb-2">Sources:</span>
+                    <div className="flex flex-wrap gap-2">
+                      {exp.sources.map((s) => (
+                        <span key={s} className="text-[13px] font-medium text-ink/80 bg-ink/[0.05] px-2.5 py-1 rounded border border-ink/10">
+                          {s}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
 
                   <div className="flex flex-wrap gap-2">
                     {exp.tags.map((t) => (
