@@ -5,7 +5,7 @@ export default function About() {
 
   return (
     <section
-      id="about-me"
+      id="about"
       className="relative py-20 px-10 border-t border-ink overflow-hidden"
     >
       <div className="relative max-w-4xl mx-auto">
@@ -14,16 +14,14 @@ export default function About() {
             About Me
           </h2>
         </div>
-        <div className="bg-paper border border-ink p-8 shadow-[8px_8px_0_#000000]">
-          <div className="space-y-4 text-ink text-lg leading-relaxed font-body">
-            {about
-              .split(/\n\s*\n/)
-              .map((block) => block.trim())
-              .filter(Boolean)
-              .map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
-          </div>
+        <div className="space-y-6 text-ink text-lg md:text-xl leading-relaxed font-body text-center md:text-left">
+          {about
+            .split(/\n\s*\n/)
+            .map((block) => block.trim())
+            .filter(Boolean)
+            .map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
         </div>
       </div>
     </section>

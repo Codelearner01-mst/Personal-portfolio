@@ -12,7 +12,7 @@ export default function Hero() {
 
   return (
     <section
-      id="about"
+      id="home"
       className="relative min-h-screen flex flex-col md:flex-row items-center justify-center gap-16 md:gap-20 pt-14 px-6 md:px-16 py-16 overflow-hidden"
     >
       {/* Dot grid background */}
