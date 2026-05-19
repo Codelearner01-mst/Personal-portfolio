@@ -6,9 +6,11 @@ import emailJsData from "../../data/emailJS";
 emailjs.init(emailJsData.options);
 export default function Contact() {
   const [sentStatus, setSentStatus] = useState("Send Message")
-  const sending = sentStatus === "Sending..."
+  const sending = sentStatus === "Send message"
   console.log("IS sending", sending)
   const formRef = useRef(null)
+
+
 
   const submit = (e) => {
     e.preventDefault();
@@ -28,14 +30,15 @@ export default function Contact() {
       setSentStatus("Sending...")
       emailjs.sendForm(emailJsData.serviceID, emailJsData.templateID, formRef.current, emailJsData.options)
         .then((response) => {
-          console.log('SUCCESS!', response.status, response.text);
-          console.log(response)
           localStorage.setItem("lastEmailSentAt", Date.now().toString());
           setSentStatus("Message sent ✓")
+          const formControls = formRef.current.querySelectorAll("input, textarea")
+          formControls.forEach(input => {
+            input.value = ""
+          });
           setTimeout(() => setSentStatus("Send Message"), 3000);
         })
         .catch((err) => {
-          console.log('FAILED...', err);
           setSentStatus("Failed to send form! Try again later.")
           setTimeout(() => setSentStatus("Send Message"), 3000);
         })
@@ -143,7 +146,7 @@ export default function Contact() {
             <button
               type="submit"
               className="flex items-center justify-center gap-2 font-heading text-[13px] font-bold tracking-widest uppercase py-3 bg-ink text-paper border-2 border-ink hover:bg-accent hover:text-ink hover:border-accent transition-all duration-200"
-              disabled={sending}
+              disabled={sentStatus !== "Send Message"}
             >
               {sentStatus}
             </button>
