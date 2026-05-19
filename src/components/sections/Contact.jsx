@@ -1,17 +1,45 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { MapPin, Mail, Send } from "lucide-react";
+import emailjs from '@emailjs/browser';
+import emailJsData from "../../data/emailJS";
 
+emailjs.init(emailJsData.options);
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [sent, setSent] = useState(false);
-
-  const handle = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const [sentStatus, setSentStatus] = useState("Send Message")
+  const sending = sentStatus === "Sending..."
+  console.log("IS sending", sending)
+  const formRef = useRef(null)
 
   const submit = (e) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 3000);
-    setForm({ name: "", email: "", message: "" });
+
+    if (formRef.current) {
+      const lastSent = localStorage.getItem("lastEmailSentAt");
+      const now = Date.now();
+      const throttleMs = 30000; // 30 seconds
+
+      // Manual rate limiting check
+      if (lastSent && now - parseInt(lastSent) < throttleMs) {
+        setSentStatus("Please wait 30s before sending again.");
+        setTimeout(() => setSentStatus("Send Message"), 3000);
+        return;
+      }
+
+      setSentStatus("Sending...")
+      emailjs.sendForm(emailJsData.serviceID, emailJsData.templateID, formRef.current, emailJsData.options)
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          console.log(response)
+          localStorage.setItem("lastEmailSentAt", Date.now().toString());
+          setSentStatus("Message sent ✓")
+          setTimeout(() => setSentStatus("Send Message"), 3000);
+        })
+        .catch((err) => {
+          console.log('FAILED...', err);
+          setSentStatus("Failed to send form! Try again later.")
+          setTimeout(() => setSentStatus("Send Message"), 3000);
+        })
+    }
   };
 
   return (
@@ -68,13 +96,11 @@ export default function Contact() {
           </div>
 
           {/* Right — form */}
-          <form onSubmit={submit} className="flex flex-col gap-4">
+          <form ref={formRef} onSubmit={submit} className="flex flex-col gap-4">
             <div className="flex flex-col gap-1">
               <label className="font-heading text-[12px] font-bold tracking-widest uppercase text-muted">Name</label>
               <input
                 name="name"
-                value={form.name}
-                onChange={handle}
                 required
                 placeholder="John Doe"
                 className="border border-border bg-paper px-4 py-3 text-[15px] outline-none focus:border-ink transition-colors duration-200 rounded-sm"
@@ -86,8 +112,6 @@ export default function Contact() {
               <input
                 name="email"
                 type="email"
-                value={form.email}
-                onChange={handle}
                 required
                 placeholder="john@example.com"
                 className="border border-border bg-paper px-4 py-3 text-[15px] outline-none focus:border-ink transition-colors duration-200 rounded-sm"
@@ -95,11 +119,20 @@ export default function Contact() {
             </div>
 
             <div className="flex flex-col gap-1">
+              <label className="font-heading text-[12px] font-bold tracking-widest uppercase text-muted">Subject</label>
+              <textarea
+                name="subject"
+                required
+                rows={4}
+                placeholder="I need your service..."
+                className="border border-border bg-paper px-4 py-3 text-[15px] outline-none focus:border-ink transition-colors duration-200 rounded-sm resize-none"
+              />
+            </div>
+
+            <div className="flex flex-col gap-1">
               <label className="font-heading text-[12px] font-bold tracking-widest uppercase text-muted">Message</label>
               <textarea
                 name="message"
-                value={form.message}
-                onChange={handle}
                 required
                 rows={5}
                 placeholder="Tell me about your project..."
@@ -110,8 +143,9 @@ export default function Contact() {
             <button
               type="submit"
               className="flex items-center justify-center gap-2 font-heading text-[13px] font-bold tracking-widest uppercase py-3 bg-ink text-paper border-2 border-ink hover:bg-accent hover:text-ink hover:border-accent transition-all duration-200"
+              disabled={sending}
             >
-              {sent ? "Message Sent ✓" : (<><Send size={13} /> Send Message</>)}
+              {sentStatus}
             </button>
           </form>
         </div>
