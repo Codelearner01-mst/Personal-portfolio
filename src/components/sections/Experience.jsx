@@ -93,26 +93,34 @@ export default function Experience() {
                   <p className="text-[15.5px] leading-relaxed text-muted mb-4">{exp.desc}</p>
 
                   {/* Sources */}
-                  <div className="mb-4">
-                    <span className="text-[12px] font-bold uppercase tracking-wider text-muted/60 block mb-2">Sources:</span>
+                  <div className="mb-6">
+                    <span className="text-[12px] font-bold uppercase tracking-wider text-muted/60 block mb-2 flex items-center gap-2">
+                      <span className="w-1 h-1 rounded-full bg-ink/40"></span> Learning Sources
+                    </span>
                     <div className="flex flex-wrap gap-2">
                       {exp.sources.map((s) => (
-                        <span key={s} className="text-[13px] font-medium text-ink/80 bg-ink/[0.05] px-2.5 py-1 rounded border border-ink/10">
+                        <span key={s} className="text-[13px] font-medium text-ink bg-ink/5 px-2.5 py-1 rounded border border-border">
                           {s}
                         </span>
                       ))}
                     </div>
                   </div>
 
-                  <div className="flex flex-wrap gap-2">
-                    {exp.tags.map((t) => (
-                      <span
-                        key={t}
-                        className="text-[12px] px-3 py-1 rounded-full border border-ink/10 bg-ink/[0.03]"
-                      >
-                        {t}
-                      </span>
-                    ))}
+                  {/* Skills / Tags */}
+                  <div className="pt-5 border-t border-border">
+                    <span className="text-[12px] font-bold uppercase tracking-wider text-muted/60 block mb-3 flex items-center gap-2">
+                      <span className="w-1 h-1 rounded-full bg-accent"></span> Technologies & Skills
+                    </span>
+                    <div className="flex flex-wrap gap-2">
+                      {exp.tags.map((t) => (
+                        <span
+                          key={t}
+                          className="text-[12px] font-medium px-3 py-1.5 rounded-full border border-ink/10 bg-paper shadow-sm"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>

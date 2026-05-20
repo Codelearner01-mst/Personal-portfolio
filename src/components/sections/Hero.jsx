@@ -151,11 +151,9 @@ export default function Hero() {
             Contact Me
           </Button>
           <Button
-            href={resume}
+            onClick={() => alert("Resume coming soon")}
             variant="outline"
             className="flex-1"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             View Resume
           </Button>
