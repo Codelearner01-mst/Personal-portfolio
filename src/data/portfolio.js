@@ -10,7 +10,7 @@ export const portfolioData = {
 I work on both the frontend and backend, and I care about building things that are clean, fast, and easy to use. Over the past couple of years, I've built and shipped a few projects and helped solve real problems through code.
 
 Right now, my focus is simple: keep improving and build things that actually help businesses work better.`,
-  tags: ["Software developer", , "Full-stack developer", "AI"],
+  tags: ["Software developer", "Full-stack developer", "AI"],
   email: "kwabenap603@gmail.com",
   avatar: Avatar,
   socials: {
