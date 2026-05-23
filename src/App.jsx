@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/layout/Navbar";
 import Hero from "./components/sections/Hero";
 import About from "./components/sections/About";
@@ -27,6 +28,7 @@ export default function App() {
         </p>
       </footer>
       <FloatingSocials />
+      <Analytics />
     </div>
   );
 }
